@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_geofence_graph"
+    app:startDestination="@id/step1Fragment">
+
+    <fragment
+        android:id="@+id/step1Fragment"
+        android:name="app.practice.geofencing.presentation.addgeograph.step1.Step1Fragment"
+        android:label="fragment_step1"
+        tools:layout="@layout/fragment_step1">
+        <action
+            android:id="@+id/action_step1Fragment_to_step2Fragment"
+            app:destination="@id/step2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/step2Fragment"
+        android:name="app.practice.geofencing.presentation.addgeograph.step2.Step2Fragment"
+        android:label="fragment_step2"
+        tools:layout="@layout/fragment_step2">
+        <action
+            android:id="@+id/action_step2Fragment_to_step3Fragment"
+            app:destination="@id/step3Fragment" />
+        <action
+            android:id="@+id/action_step2Fragment_to_step1Fragment"
+            app:destination="@id/step1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/step3Fragment"
+        android:name="app.practice.geofencing.presentation.addgeograph.step3.Step3Fragment"
+        android:label="fragment_step3"
+        tools:layout="@layout/fragment_step3">
+        <action
+            android:id="@+id/action_step3Fragment_to_step2Fragment"
+            app:destination="@id/step2Fragment" />
+    </fragment>
+</navigation>
